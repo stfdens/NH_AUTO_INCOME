@@ -24,7 +24,7 @@ function logTimeUntilNextRun(nextRunTime) {
 }
 
 async function startScraping() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 
   await page.goto("https://kageherostudio.com/event/?event=daily");
